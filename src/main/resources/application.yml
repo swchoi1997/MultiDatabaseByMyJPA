@@ -1,0 +1,29 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    generate-ddl: true
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    hikari:
+      test2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:23306/multiTest
+        username: root
+        password: oracle
+      test1:
+        driver-class-name: org.postgresql.Driver
+        jdbc-url: jdbc:postgresql://127.0.0.1:25432/multitest
+        username: oracle
+        password: oracle
+
+#
+#logging:
+#  level:
+#    org.hibernate.SQL: info
+#    org.hibernate.type: trace
